@@ -137,6 +137,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+background-color: white;
 
 /* width: 1352px; */
 }
@@ -246,13 +247,32 @@ justify-content: center;
 .banner-text-block {
     width: 50%;
     padding: 50px;
+    position: relative;
 
 }
 
 .banner-h2 {
     font-size: 3rem;
     font-weight: 300;
+    
 }
+
+.banner-line {
+position: absolute;
+background-color: var(--brand-red);
+margin-top: 30px;
+width: 50%;
+height: 5px;
+}
+
+.banner-line.blue-line {
+    background-color: var(--brand-blue);
+}
+
+.banner-line.green-line {
+    background-color: var(--brand-green);
+}
+
 
 .baner-p {
     font-size: 2rem;
@@ -310,6 +330,9 @@ justify-content: center;
 .pricing {
     margin-bottom: 50px;
     padding-bottom: 100px;
+    background-color: white;
+    width: 100%;
+    padding-top: 50px;
  
 }
 
@@ -448,10 +471,10 @@ margin-bottom: 25px;
     margin-bottom: 50px;
 }
 
-.contact {
+.contact-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 0;
 
   
@@ -462,21 +485,26 @@ margin-bottom: 25px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-   
-  width: 40%;
-  margin: 5%;
+   width: 40%;
+margin-top: 0;
 
 
 }
 
 .contact-info {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
    
 }
 
 .contact-p {
-    text-align: left;
-    display: inline;
+    display: flex;
+    padding: 10px;
+}
+
+.contact-img {
+    margin: 0 5px;
 }
 
 .contact-form {
@@ -486,11 +514,16 @@ margin-bottom: 25px;
 }
 
 .contact-text-p {
-    align-items: flex-start;
+    margin-bottom: 20px;
+    margin-right: 90px;
 }
 
 .questions {
+    margin-top:100px;
+  margin-bottom: 15px;
     text-align: left;
+    font-size: 3rem;
+
 }
 
 
@@ -600,13 +633,13 @@ input {
 
 .send {
 border: none;
-padding: 15px 55px;
+padding: 15px 105px;
 background-color: var(--brand-blue);
 color: white;
 border-radius: 20px;
 cursor: pointer;
 margin-top: 10px;
-margin-left: 350px;
+margin-left: 300px;
 transition: background-color 0.5s;
 }
 
