@@ -1,0 +1,614 @@
+
+$brand-blue: #08a6e4;
+$brand-red: #fb3b64;
+$brand-green: #55dfb4;
+$brand-text-grey: #a5a5a5;
+
+html {
+  font-size: 16px;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+nav {
+  width: 100vw;
+  -webkit-box-shadow: 0px 5px 24px 0px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 0px 5px 24px 0px rgba(66, 68, 90, 1);
+  box-shadow: 0px 5px 24px 0px rgba(66, 68, 90, 1);
+  overflow: hidden;
+}
+
+.nav-bar {
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  margin-left: 100px;
+  font-size: 2rem;
+  color: $brand-blue;
+}
+
+.menu {
+  margin-right: 100px;
+  font-size: 1.3rem;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+.menu a {
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: 2px;
+  position: relative;
+  text-decoration: none;
+  color: $brand-text-grey;
+  margin: 0 55px;
+}
+
+.menu a:hover {
+  color: black;
+}
+
+.menu a::after {
+  content: "";
+  background-color: #08a6e400;
+  width: 100%;
+  height: 6px;
+  position: absolute;
+  left: 0;
+  top: 61px;
+  transition: background-color 0.5s;
+}
+
+.menu a:hover::after {
+  background-color: $brand-blue;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-h1 {
+  font-size: 3rem;
+  margin-top: 150px;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+.header-p {
+}
+
+.header-btn {
+  border-radius: 30px;
+  background-color: $brand-blue;
+  color: white;
+  border: none;
+  padding: 5px 150px;
+  text-decoration: none;
+  transition: background-color 0.5s;
+}
+
+.header-btn:hover {
+  background-color: $brand-green;
+}
+.header-img {
+  width: 100vw;
+  margin: 100px 0 0 0;
+  box-shadow: inset 0px -28px 25px -30px rgba(66, 68, 90, 1);
+}
+
+main {
+  width: 100%;
+  background-color: #f7f7f7;
+}
+
+.container {
+  width: 1352px;
+  margin: auto;
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+
+  /* width: 1352px; */
+}
+
+.content-h2 {
+  margin: 100px 0;
+  font-weight: 400;
+}
+
+.content-icon-box {
+  display: flex;
+  justify-content: space-around;
+}
+
+.icon-p {
+  text-align: center;
+  color: $brand-text-grey;
+}
+
+.content-icon {
+  display: flex;
+  flex-direction: column;
+  margin: 10% 33%;
+}
+.icon-circle {
+  background-color: $brand-red;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border: none;
+  position: relative;
+}
+
+.icon-img {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  height: 60px;
+}
+
+.content-h2 {
+  font-size: 2rem;
+}
+
+.icon-h3 {
+  margin: 5px;
+  letter-spacing: 3px;
+}
+
+.icon2 {
+  background-color: $brand-blue;
+}
+
+.icon3 {
+  background-color: $brand-green;
+}
+
+.banners-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+  width: 1352px;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 80px 150px;
+  margin: 50px 0;
+  background-color: white;
+  box-shadow: 0px 0px 7px -3px rgba(66, 68, 90, 1);
+}
+
+.banner-image-block {
+  position: relative;
+}
+
+.image-shape1 {
+  background-color: $brand-red;
+  border-radius: 25%;
+  width: 250px;
+  height: 250px;
+  border: none;
+  position: abosolute;
+  transform: rotate(50deg);
+}
+
+.banner-img {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+
+  height: 300px;
+  position: abosolute;
+}
+
+.banner-text-block {
+  width: 50%;
+  padding: 50px;
+  position: relative;
+}
+
+.banner-h2 {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.banner-line {
+  position: absolute;
+  background-color: $brand-red;
+  margin-top: 30px;
+  width: 50%;
+  height: 5px;
+}
+
+.banner-line.blue-line {
+  background-color: $brand-blue;
+}
+
+.banner-line.green-line {
+  background-color: $brand-green;
+}
+
+.baner-p {
+  font-size: 2rem;
+}
+
+.image-shape2 {
+  background-color: $brand-blue;
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  border: none;
+  position: abosolute;
+  transform: rotate(50deg);
+}
+
+.banner-img2 {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  height: 400px;
+  position: abosolute;
+}
+
+.banner-2 {
+  padding: 50px 80px 100px;
+}
+
+.banner-image-block3 {
+  background-color: $brand-green;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: justify-content;
+  align-items: center;
+  position: relative;
+}
+
+.banner-3 {
+  padding: 0;
+}
+
+.banner-img3 {
+  height: 250px;
+  position: absolute;
+  top: 120px;
+}
+
+.pricing {
+  margin-bottom: 50px;
+  padding-bottom: 100px;
+  background-color: white;
+  width: 100%;
+  padding-top: 50px;
+}
+
+.pricing-h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.pricing-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricing-single-tab {
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid $brand-red;
+  border-radius: 10px;
+  margin: 10px 15px;
+  background-color: white;
+}
+
+li {
+  margin-left: 0;
+  margin-right: 40px;
+  list-style-image: url("../assets/Ckechmark-1.svg");
+  padding: 10px 0;
+}
+
+li.uncheck {
+  list-style-image: url("../assets/Close.svg");
+}
+
+.pricing-title {
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+}
+
+.pricing-price {
+  font-size: 2.5rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  margin: 0;
+}
+
+.pricing-btn {
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.8rem;
+  padding: 15px 55px;
+  top: 95%;
+  position: absolute;
+  transition: background-color 0.5s;
+  cursor: pointer;
+}
+
+.pricing-btn:hover {
+  background-color: $brand-text-grey;
+}
+.btn1 {
+  background-color: $brand-red;
+}
+
+.btn2 {
+  background-color: $brand-blue;
+}
+
+.btn3 {
+  background-color: $brand-green;
+}
+
+.offer-p {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.price1 {
+  color: $brand-red;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.price2 {
+  color: $brand-blue;
+  margin-top: 10px;
+}
+
+.price3 {
+  color: $brand-green;
+  margin-top: 10px;
+}
+
+.tab1 {
+  border: 1px solid $brand-red;
+  margin-top: 50px;
+  height: 400px;
+}
+
+.tab2 {
+  border: 1px solid $brand-blue;
+  box-shadow: 0px 0px 15px -5px $brand-blue;
+  flex-grow: 1.2;
+  margin: 0px 25px;
+}
+
+.tab3 {
+  border: 1px solid $brand-green;
+  margin-top: 50px;
+  height: 400px;
+}
+
+.pricing-list {
+  margin-bottom: 50px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 0;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 40%;
+  margin-top: 0;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.contact-p {
+  display: flex;
+  padding: 10px;
+}
+
+.contact-img {
+  margin: 0 5px;
+}
+
+.contact-form {
+  width: 40%;
+  margin: 5%;
+}
+
+.contact-text-p {
+  margin-bottom: 20px;
+  margin-right: 90px;
+}
+
+.questions {
+  margin-top: 100px;
+  margin-bottom: 15px;
+  text-align: left;
+  font-size: 3rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.blue-label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $brand-blue;
+  margin: 10px 0px;
+}
+
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid $brand-blue;
+  padding: 10px;
+  margin: 15px 0px;
+}
+
+.checkboxing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: white;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+  background-image: url("../assets/Checkmark.svg");
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 15px;
+  height: 15px;
+  padding: 5px;
+}
+
+.consent-text {
+  font-size: 0.8rem;
+  margin: 0 35px;
+}
+
+.send {
+  border: none;
+  padding: 15px 105px;
+  background-color: $brand-blue;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 300px;
+  transition: background-color 0.5s;
+}
+
+.send:hover {
+  background-color: $brand-text-grey;
+}
+
+footer {
+  width: 100%;
+  background-color: #f7f7f7;
+  box-shadow: 0px 0px 20px -2px rgba(0, 0, 0, 0.308);
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-logo {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.footer-p {
+  font-size: 1rem;
+  margin-left: 100px;
+  color: $brand-text-grey;
+}
+
+.social-icons img {
+  margin: 10px;
+}
