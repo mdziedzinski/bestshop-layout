@@ -1,8 +1,4 @@
-
-$brand-blue: #08a6e4;
-$brand-red: #fb3b64;
-$brand-green: #55dfb4;
-$brand-text-grey: #a5a5a5;
+@use "./abstracts/colors";
 
 html {
   font-size: 16px;
@@ -21,36 +17,37 @@ h3 {
 body {
   width: 100%;
   margin: 0;
-
+  background-color: white;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
 nav {
-  width: 100vw;
-  -webkit-box-shadow: 0px 5px 24px 0px rgba(66, 68, 90, 1);
-  -moz-box-shadow: 0px 5px 24px 0px rgba(66, 68, 90, 1);
-  box-shadow: 0px 5px 24px 0px rgba(66, 68, 90, 1);
+  width: 100%;
+  background-color: white;
   overflow: hidden;
+  height: 107px;
+  box-shadow: -50px 5px 40px 5px rgba(0, 0, 0, 0.486);
 }
 
 .nav-bar {
-  position: sticky;
+  // position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  overflow: hidden;
+  // width: 100vh;
 }
 
 .logo {
-  margin-left: 100px;
+  margin-left: 10%;
   font-size: 2rem;
-  color: $brand-blue;
+  color: colors.$brand-blue;
 }
 
 .menu {
-  margin-right: 100px;
+  margin-right: 10%;
   font-size: 1.3rem;
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
@@ -62,8 +59,8 @@ nav {
   letter-spacing: 2px;
   position: relative;
   text-decoration: none;
-  color: $brand-text-grey;
-  margin: 0 55px;
+  color: colors.$brand-text-grey;
+  margin: 0 25px;
 }
 
 .menu a:hover {
@@ -82,7 +79,7 @@ nav {
 }
 
 .menu a:hover::after {
-  background-color: $brand-blue;
+  background-color: colors.$brand-blue;
 }
 
 header {
@@ -90,21 +87,32 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  // background-color: white;
+  margin-top: 15px;
+  padding: 15px 0;
+}
+
+.header-bg {
+  background-image: url("../assets/Background.png");
+  background-size: cover;
+  width: 100%;
+  max-height: 519px;
+  aspect-ratio: 1;
+  background-color: white;
+  background-position: center;
 }
 
 .header-h1 {
   font-size: 3rem;
-  margin-top: 150px;
+  top: 150px;
   text-transform: capitalize;
+  background-color: white;
   font-weight: 400;
-}
-
-.header-p {
 }
 
 .header-btn {
   border-radius: 30px;
-  background-color: $brand-blue;
+  background-color: colors.$brand-blue;
   color: white;
   border: none;
   padding: 5px 150px;
@@ -113,22 +121,24 @@ header {
 }
 
 .header-btn:hover {
-  background-color: $brand-green;
-}
-.header-img {
-  width: 100vw;
-  margin: 100px 0 0 0;
-  box-shadow: inset 0px -28px 25px -30px rgba(66, 68, 90, 1);
+  background-color: colors.$brand-green;
 }
 
 main {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 15px;
   background-color: #f7f7f7;
 }
 
 .container {
   width: 1352px;
-  margin: auto;
+  // margin-inline: 15px;
+
+  // margin: auto;
 }
 
 .content-box {
@@ -136,13 +146,16 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
   background-color: white;
 
   /* width: 1352px; */
 }
 
 .content-h2 {
+  text-align: center;
   margin: 100px 0;
+  padding: 15px;
   font-weight: 400;
 }
 
@@ -153,7 +166,7 @@ main {
 
 .icon-p {
   text-align: center;
-  color: $brand-text-grey;
+  color: colors.$brand-text-grey;
 }
 
 .content-icon {
@@ -162,7 +175,7 @@ main {
   margin: 10% 33%;
 }
 .icon-circle {
-  background-color: $brand-red;
+  background-color: colors.$brand-red;
   border-radius: 50%;
   width: 100px;
   height: 100px;
@@ -183,15 +196,15 @@ main {
 
 .icon-h3 {
   margin: 5px;
-  letter-spacing: 3px;
+  letter-spacing: 7px;
 }
 
 .icon2 {
-  background-color: $brand-blue;
+  background-color: colors.$brand-blue;
 }
 
 .icon3 {
-  background-color: $brand-green;
+  background-color: colors.$brand-green;
 }
 
 .banners-box {
@@ -199,17 +212,27 @@ main {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: space-evenly;
-  width: 1352px;
+  width: 100%;
 }
 
 .banner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
   padding: 50px 80px 150px;
   margin: 50px 0;
   background-color: white;
   box-shadow: 0px 0px 7px -3px rgba(66, 68, 90, 1);
+}
+
+.banner-1 {
+  flex-direction: row-reverse;
+}
+
+.banner-p {
+  display: block;
+  max-width: 500px;
 }
 
 .banner-image-block {
@@ -217,22 +240,28 @@ main {
 }
 
 .image-shape1 {
-  background-color: $brand-red;
+  position: absolute;
+  background-color: colors.$brand-red;
   border-radius: 25%;
-  width: 250px;
-  height: 250px;
+  max-width: 250px;
+  width: 100%;
+  aspect-ratio: 1;
+  height: auto;
   border: none;
-  position: abosolute;
   transform: rotate(50deg);
+  z-index: 1;
+  top: 0;
+  right: 0;
 }
 
 .banner-img {
-  position: absolute;
+  position: relative;
   top: 60px;
   right: 20px;
-
-  height: 300px;
-  position: abosolute;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  z-index: 10;
 }
 
 .banner-text-block {
@@ -248,18 +277,18 @@ main {
 
 .banner-line {
   position: absolute;
-  background-color: $brand-red;
+  background-color: colors.$brand-red;
   margin-top: 30px;
   width: 50%;
   height: 5px;
 }
 
 .banner-line.blue-line {
-  background-color: $brand-blue;
+  background-color: colors.$brand-blue;
 }
 
 .banner-line.green-line {
-  background-color: $brand-green;
+  background-color: colors.$brand-green;
 }
 
 .baner-p {
@@ -267,21 +296,34 @@ main {
 }
 
 .image-shape2 {
-  background-color: $brand-blue;
+  // background-color: colors.$brand-blue;
+  // border-radius: 50%;
+  // width: 400px;
+  // height: 400px;
+  // border: none;
+  // position: abosolute;
+  // top: 0;
+  position: absolute;
+  background-color: colors.$brand-blue;
   border-radius: 50%;
-  width: 400px;
-  height: 400px;
+  max-width: 400px;
+  width: 100%;
+  aspect-ratio: 1;
+  height: auto;
   border: none;
-  position: abosolute;
   transform: rotate(50deg);
+  z-index: 1;
+  top: 0;
+  right: 0;
 }
 
 .banner-img2 {
-  position: absolute;
-  top: 20px;
-  left: 10px;
-  height: 400px;
-  position: abosolute;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  top: 10px;
+  height: auto;
+  z-index: 10;
 }
 
 .banner-2 {
@@ -289,11 +331,10 @@ main {
 }
 
 .banner-image-block3 {
-  background-color: $brand-green;
+  background-color: colors.$brand-green;
   width: 400px;
   height: 400px;
   display: flex;
-  flex-direction: justify-content;
   align-items: center;
   position: relative;
 }
@@ -334,7 +375,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid $brand-red;
+  border: 1px solid colors.$brand-red;
   border-radius: 10px;
   margin: 10px 15px;
   background-color: white;
@@ -377,18 +418,18 @@ li.uncheck {
 }
 
 .pricing-btn:hover {
-  background-color: $brand-text-grey;
+  background-color: colors.$brand-text-grey;
 }
 .btn1 {
-  background-color: $brand-red;
+  background-color: colors.$brand-red;
 }
 
 .btn2 {
-  background-color: $brand-blue;
+  background-color: colors.$brand-blue;
 }
 
 .btn3 {
-  background-color: $brand-green;
+  background-color: colors.$brand-green;
 }
 
 .offer-p {
@@ -398,36 +439,36 @@ li.uncheck {
 }
 
 .price1 {
-  color: $brand-red;
+  color: colors.$brand-red;
   margin-top: 10px;
   margin-bottom: 50px;
 }
 
 .price2 {
-  color: $brand-blue;
+  color: colors.$brand-blue;
   margin-top: 10px;
 }
 
 .price3 {
-  color: $brand-green;
+  color: colors.$brand-green;
   margin-top: 10px;
 }
 
 .tab1 {
-  border: 1px solid $brand-red;
+  border: 1px solid colors.$brand-red;
   margin-top: 50px;
   height: 400px;
 }
 
 .tab2 {
-  border: 1px solid $brand-blue;
-  box-shadow: 0px 0px 15px -5px $brand-blue;
+  border: 1px solid colors.$brand-blue;
+  box-shadow: 0px 0px 15px -5px colors.$brand-blue;
   flex-grow: 1.2;
   margin: 0px 25px;
 }
 
 .tab3 {
-  border: 1px solid $brand-green;
+  border: 1px solid colors.$brand-green;
   margin-top: 50px;
   height: 400px;
 }
@@ -494,14 +535,14 @@ li.uncheck {
   letter-spacing: 2px;
   font-weight: bold;
   text-transform: uppercase;
-  color: $brand-blue;
+  color: colors.$brand-blue;
   margin: 10px 0px;
 }
 
 input {
   background: transparent;
   border: none;
-  border-bottom: 1px solid $brand-blue;
+  border-bottom: 1px solid colors.$brand-blue;
   padding: 10px;
   margin: 15px 0px;
 }
@@ -574,26 +615,28 @@ input {
 .send {
   border: none;
   padding: 15px 105px;
-  background-color: $brand-blue;
+  background-color: colors.$brand-blue;
   color: white;
   border-radius: 20px;
   cursor: pointer;
   margin-top: 10px;
-  margin-left: 300px;
+
   transition: background-color 0.5s;
 }
 
 .send:hover {
-  background-color: $brand-text-grey;
+  background-color: colors.$brand-text-grey;
 }
 
 footer {
   width: 100%;
   background-color: #f7f7f7;
   box-shadow: 0px 0px 20px -2px rgba(0, 0, 0, 0.308);
+  overflow: hidden;
 }
 
 .footer-container {
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -606,9 +649,158 @@ footer {
 .footer-p {
   font-size: 1rem;
   margin-left: 100px;
-  color: $brand-text-grey;
+  color: colors.$brand-text-grey;
 }
 
 .social-icons img {
   margin: 10px;
+}
+
+///////MEDIA
+///////MEDIA
+///////MEDIA
+
+@media (max-width: 1352px) {
+  .container {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .nav {
+    overflow: hidden;
+    width: 100%;
+  }
+  .nav-bar {
+    overflow: hidden;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .logo {
+    margin-bottom: 20px;
+    margin-left: 0;
+  }
+  .nav-bar {
+    height: 107px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .menu {
+    margin-right: 0%;
+    bottom: 25px;
+    position: relative;
+  }
+
+  .menu a::after {
+    content: "";
+    background-color: #08a6e400;
+    width: 100%;
+    height: 6px;
+    position: absolute;
+    left: 0;
+    top: 1.5rem;
+    transition: background-color 0.5s;
+  }
+
+  .menu a:hover::after {
+    background-color: colors.$brand-blue;
+  }
+}
+
+@media (max-width: 992px) {
+  .logo {
+    margin-left: 10%;
+  }
+  .nav-bar {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .menu {
+    display: none;
+  }
+
+  .menu-btn__burger {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    margin-right: 10%;
+    // border: 3px solid rgb(19, 5, 5);
+  }
+
+  .menu-btn__burger__line-center {
+    width: 50px;
+    height: 6px;
+    background-color: colors.$brand-blue;
+    //  box-shadow: 0 2px 5px rgba(43, 40, 40, 0.596);
+    transition: all 0.5s ease-in-out;
+  }
+  .menu-btn__burger__line-top,
+  .menu-btn__burger__line-bottom {
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background-color: colors.$brand-blue;
+    //  box-shadow: 0 2px 5px rgba(43, 40, 40, 0.596);
+    transition: all 0.5s ease-in-out;
+  }
+  .menu-btn__burger__line-top {
+    transform: translateY(-16px);
+  }
+  .menu-btn__burger__line-bottom {
+    transform: translateY(16px);
+  }
+  .menu-btn__burger.open .menu-btn__burger__line-center {
+    transform: translateX(-50px);
+    background: transparent;
+  }
+
+  .menu-btn__burger.open .menu-btn__burger__line-bottom {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  .menu-btn__burger.open .menu-btn__burger__line-top {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+  .menu.open {
+    background-color: white;
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    top: 100px;
+    width: 100vw;
+    height: 130px;
+    -webkit-box-shadow: 0px 2px 24px -2px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 2px 24px -2px rgba(66, 68, 90, 1);
+    box-shadow: 0px 2px 24px -2px rgba(66, 68, 90, 1);
+  }
+
+  .content-icon-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 80px 150px;
+    margin: 50px 0;
+    background-color: white;
+    box-shadow: 0px 0px 7px -3px rgba(66, 68, 90, 1);
+  }
 }
