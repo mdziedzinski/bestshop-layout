@@ -163,7 +163,7 @@ main {
 .content-icon {
   display: flex;
   flex-direction: column;
-  margin: 10% 33%;
+  margin: 30px 100px;
 }
 
 .icon-circle {
@@ -336,6 +336,10 @@ main {
 
 .pricing {
   margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding-bottom: 100px;
   background-color: white;
   width: 100%;
@@ -694,6 +698,10 @@ footer {
   }
 }
 @media (max-width: 992px) {
+  .container {
+    width: 100%;
+    padding-inline: 15px;
+  }
   .logo {
     margin-left: 10%;
   }
@@ -767,10 +775,138 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px 80px 150px;
-    margin: 50px 0;
+    padding: 10px;
+    margin: 20px 0;
     background-color: white;
     box-shadow: 0px 0px 7px -3px rgb(66, 68, 90);
+  }
+  .banner-line {
+    display: none;
+  }
+  .banner-2 {
+    padding: 10px;
+  }
+  .banner-image-block3 {
+    background-color: #55dfb4;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .banner-3 {
+    padding: 0;
+  }
+  .banner-text-block {
+    width: auto;
+    padding: 30px;
+    position: relative;
+  }
+  .pricing-tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .pricing-single-tab {
+    position: relative;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fb3b64;
+    border-radius: 10px;
+    margin: 40px 0px;
+    background-color: white;
+  }
+  .pricing-main-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 20px;
+  }
+  .pricing-title {
+    font-size: 1.5rem;
+  }
+  .pricing-price {
+    font-size: 3rem;
+  }
+  li {
+    padding: 10px;
+    margin: 0px;
+    font-size: 1.25rem;
+  }
+  .pricing-btn {
+    font-size: 1.25rem;
+  }
+  .offer-p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+  }
+  .price1 {
+    color: #fb3b64;
+    margin: 0px;
+  }
+  .price2 {
+    color: #08a6e4;
+    margin: 0px;
+  }
+  .price3 {
+    color: #55dfb4;
+    margin: 0px;
+  }
+  .tab1 {
+    border: 1px solid #fb3b64;
+    margin-top: 50px;
+    height: 100%;
+  }
+  .tab2 {
+    border: 1px solid #08a6e4;
+    box-shadow: 0px 0px 15px -5px #08a6e4;
+    flex-grow: 1.2;
+  }
+  .tab3 {
+    border: 1px solid #55dfb4;
+    margin-block: 20px;
+    height: 100%;
+  }
+  .pricing-list {
+    margin: 20px;
+  }
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 0;
+    width: 100%;
+  }
+  .contact-text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .contact-text-p {
+    margin: 0;
+    width: 100%;
+    display: block;
+  }
+  .contact-info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .contact-p {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
