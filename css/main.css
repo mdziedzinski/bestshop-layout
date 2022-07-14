@@ -612,27 +612,32 @@ input {
 }
 
 footer {
-  width: 100%;
   background-color: #f7f7f7;
   box-shadow: 0px 0px 20px -2px rgba(0, 0, 0, 0.308);
-  overflow: hidden;
 }
 
 .footer-container {
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0 auto;
+  width: 80%;
+  padding-inline: 15px;
 }
 
-.footer-logo {
-  margin-top: 0;
-  margin-bottom: 0;
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.logo.footer-logo {
+  margin: 0;
 }
 
 .footer-p {
   font-size: 1rem;
-  margin-left: 100px;
   color: #a5a5a5;
 }
 
