@@ -1,10 +1,11 @@
 @use "./abstracts/variables";
-@use "./abstracts/media";
-
 @use "./sections/global.scss";
+
 @use "./sections/nav.scss";
 @use "./sections/header.scss";
 @use "./sections/banners.scss";
 @use "./sections/pricing.scss";
 @use "./sections/contact.scss";
 @use "./sections/footer.scss";
+
+@use "./abstracts/media";

@@ -1,6 +1,4 @@
-@use "./abstracts/variables";
-
-
+@use "../abstracts/variables";
 
 .contact-container {
   display: flex;
@@ -152,4 +150,3 @@ input {
 .send:hover {
   background-color: variables.$brand-text-grey;
 }
-
