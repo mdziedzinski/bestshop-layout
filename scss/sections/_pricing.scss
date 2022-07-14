@@ -1,0 +1,133 @@
+@use "./abstracts/variables";
+
+.pricing {
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 100px;
+  background-color: variables.$background-white;
+  width: 100%;
+  padding-top: 50px;
+}
+
+.pricing-h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.pricing-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricing-single-tab {
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid variables.$brand-red;
+  border-radius: 10px;
+  margin: 10px 15px;
+  background-color: variables.$background-white;
+}
+
+li {
+  margin-left: 0;
+  margin-right: 40px;
+  list-style-image: url("../assets/Ckechmark-1.svg");
+  padding: 10px 0;
+}
+
+li.uncheck {
+  list-style-image: url("../assets/Close.svg");
+}
+
+.pricing-title {
+  font-size: 1rem;
+  font-family: variables.$font-h;
+  font-weight: bold;
+}
+
+.pricing-price {
+  font-size: 2.5rem;
+  font-family: variables.$font-p;
+  font-weight: 300;
+  margin: 0;
+}
+
+.pricing-btn {
+  border: none;
+  border-radius: 20px;
+  color: variables.$background-white;
+  font-size: 0.8rem;
+  padding: 15px 55px;
+  top: 95%;
+  position: absolute;
+  transition: background-color 0.5s;
+  cursor: pointer;
+}
+
+.pricing-btn:hover {
+  background-color: variables.$brand-text-grey;
+}
+.btn1 {
+  background-color: variables.$brand-red;
+}
+
+.btn2 {
+  background-color: variables.$brand-blue;
+}
+
+.btn3 {
+  background-color: variables.$brand-green;
+}
+
+.offer-p {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.price1 {
+  color: variables.$brand-red;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.price2 {
+  color: variables.$brand-blue;
+  margin-top: 10px;
+}
+
+.price3 {
+  color: variables.$brand-green;
+  margin-top: 10px;
+}
+
+.tab1 {
+  border: 1px solid variables.$brand-red;
+  margin-top: 50px;
+  height: 400px;
+}
+
+.tab2 {
+  border: 1px solid variables.$brand-blue;
+  box-shadow: 0px 0px 15px -5px variables.$brand-blue;
+  flex-grow: 1.2;
+  margin: 0px 25px;
+}
+
+.tab3 {
+  border: 1px solid variables.$brand-green;
+  margin-top: 50px;
+  height: 400px;
+}
+
+.pricing-list {
+  margin-bottom: 50px;
+}

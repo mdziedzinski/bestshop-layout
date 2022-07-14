@@ -1,0 +1,98 @@
+@use "./abstracts/variables";
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // background-color: variables.$background-white;
+  margin-top: 15px;
+  padding: 15px 0;
+}
+
+.header-bg {
+  background-image: url("../assets/Background.png");
+  background-size: cover;
+  width: 100%;
+  max-height: 519px;
+  aspect-ratio: 1;
+  background-color: variables.$background-white;
+  background-position: center;
+}
+
+.header-h1 {
+  font-size: 3rem;
+  top: 150px;
+  text-transform: capitalize;
+  background-color: variables.$background-white;
+  font-weight: 400;
+}
+
+.header-btn {
+  border-radius: 30px;
+  background-color: variables.$brand-blue;
+  color: variables.$background-white;
+  border: none;
+  padding: 5px 150px;
+  text-decoration: none;
+  transition: background-color 0.5s;
+}
+
+.header-btn:hover {
+  background-color: variables.$brand-green;
+}
+
+.content-h2 {
+  text-align: center;
+  margin: 100px 0;
+  padding: 15px;
+  font-weight: 400;
+}
+
+.content-icon-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-p {
+  text-align: center;
+  color: variables.$brand-text-grey;
+}
+
+.content-icon {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 100px;
+}
+.icon-circle {
+  background-color: variables.$brand-red;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border: none;
+  position: relative;
+}
+
+.icon-img {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  height: 60px;
+}
+
+.content-h2 {
+  font-size: 2rem;
+}
+
+.icon-h3 {
+  margin: 5px;
+  letter-spacing: 7px;
+}
+
+.icon2 {
+  background-color: variables.$brand-blue;
+}
+
+.icon3 {
+  background-color: variables.$brand-green;
+}
