@@ -1,8 +1,8 @@
-## Simple one-page layout using pure HTML5/CSS3
+## Simple one-page layout using HTML5/CSS3
 
 ## Welcome! 👋
 
-This is simple one-page for desktop.
+This is simple RWD one-page 
 
 ## Tools used
 
@@ -10,6 +10,7 @@ This is simple one-page for desktop.
 - Semantic HTML
 - CSS (Sass)
   - Flexbox
+-JavaScript
 
 ## Live website
 
