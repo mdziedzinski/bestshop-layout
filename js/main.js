@@ -14,9 +14,15 @@ let ordersPrice = 5;
 let productsPrice = 10;
 const showTotal = document.querySelector("#total-price");
 let updateTotal = document.querySelector(".total__price");
-let arrTotal = [];
+let arrTotal = {
+  quantity: 0,
+  months: 0,
+  package: 0,
+  accounting: 0,
+  rental: 0,
+};
+const form = document.querySelector(".calc__form");
 let sumTotal = 0;
-
 
 console.log(summaryItems[1].getAttribute("data-id"));
 
@@ -28,6 +34,7 @@ function calculatorInputProducts(event) {
       el.classList.add("open");
       el.children[1].innerText = `${this.event.target.value} x $${productsPrice}`;
       el.children[2].innerText = `$ ${this.event.target.value * productsPrice}`;
+      arrTotal.quantity = this.event.target.value;
     }
   });
 }
@@ -39,10 +46,12 @@ function calculatorInputOrders(event) {
       el.classList.add("open");
       el.children[1].innerText = `${this.event.target.value} x $${ordersPrice}`;
       el.children[2].innerText = `$ ${this.event.target.value * ordersPrice}`;
-      updateTotal.innerText = this.event.target.value * productsPrice;
+      arrTotal.months = this.event.target.value;
     }
   });
 }
+
+console.log("test");
 
 //choose package
 
@@ -62,12 +71,15 @@ function calculatorChoice(event) {
           element.children[1].innerText = packageData;
           if (element.children[1].innerText === "basic") {
             element.children[2].innerText = "$10";
+            arrTotal.package = 10;
           }
           if (element.children[1].innerText === "professional") {
             element.children[2].innerText = "$20";
+            arrTotal.package = 20;
           }
           if (element.children[1].innerText === "premium") {
             element.children[2].innerText = "$30";
+            arrTotal.package = 30;
           }
           selectInput.innerText = packageData;
         }
@@ -83,12 +95,31 @@ function calculatorCheck(event) {
     summaryItems.forEach(function (el) {
       if (this.event.target.id === el.getAttribute("data-id")) {
         el.classList.add("open");
+        arrTotal.accounting = 10;
       }
     });
   } else {
     summaryItems.forEach(function (el) {
       if (this.event.target.id === el.getAttribute("data-id")) {
         el.classList.remove("open");
+        arrTotal.accounting = 0;
+      }
+    });
+  }
+}
+function calculatorCheck2(event) {
+  if (this.checked) {
+    summaryItems.forEach(function (el) {
+      if (this.event.target.id === el.getAttribute("data-id")) {
+        el.classList.add("open");
+        arrTotal.rental = 10;
+      }
+    });
+  } else {
+    summaryItems.forEach(function (el) {
+      if (this.event.target.id === el.getAttribute("data-id")) {
+        el.classList.remove("open");
+        arrTotal.rental = 0;
       }
     });
   }
@@ -98,16 +129,17 @@ products.addEventListener("input", calculatorInputProducts);
 orders.addEventListener("input", calculatorInputOrders);
 
 accounting.addEventListener("change", calculatorCheck);
-terminal.addEventListener("change", calculatorCheck);
+terminal.addEventListener("change", calculatorCheck2);
 
 packages.addEventListener("click", calculatorChoice);
 
-function calculateTotal() {
-  for (let i = 0; i <= arrTotal.length; i++) {
-    sumTotal += arrTotal[i];
-    return sumTotal;
-  }
+function totalCost() {
+  //   console.log(arrTotal);
+  const sum =
+    arrTotal.package * arrTotal.quantity * arrTotal.months +
+    arrTotal.rental +
+    arrTotal.accounting;
+
+  updateTotal.innerText = sum;
 }
-
-
-updateTotal.innerText = "suma";
+form.addEventListener("change", totalCost);
